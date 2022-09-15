@@ -1,0 +1,75 @@
+﻿    <%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SMS.master.cs" Inherits="Student_Management_System.SMS" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        body{
+            background-image:url("Images/E/Images/Master.png");
+            background-repeat:no-repeat;
+            
+        }
+        .newStyle1 {
+            font-family: "Copperplate Gothic Bold";
+            border-style: solid;
+            border-width: thin;
+            background-color: #00FFFF;
+        }
+        .newStyle2 {
+            line-height: inherit;
+            background-image:url();
+            background-repeat:no-repeat;
+            background-position:inherit;
+        }
+        .newStyle3 {
+            background-color: #FFFFFF;
+        }
+        .newStyle6 {
+            background-image: url("");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: inherit;
+        }
+        .auto-style1 {
+            line-height: inherit;
+            background-image: url("");
+            background-repeat: no-repeat;
+            background-position: inherit;
+            font-size: xx-large;
+        }
+        .auto-style2 {
+            font-size: large;
+        }
+        .auto-style3 {
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" class="newStyle6" runat="server">
+        <div>
+            <center>
+                <h1 class="auto-style1"><em class="newStyle6">Nexon Classes</em></h1>
+                <br />
+            <div style="background-color:lightgrey">
+                <asp:LinkButton ID="LnkAdmin" runat="server" OnClick="LnkAdmin_Click" Font-Bold="False" Font-Italic="False" Font-Names="Corbel" Font-Overline="False" Font-Underline="False" ForeColor="Black" CssClass="auto-style2" >Admin</asp:LinkButton>&nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="LnkCourse" runat="server" OnClick="LnkCourse_Click" Font-Names="Corbel" Font-Underline="False" ForeColor="Black" CssClass="auto-style2">Course</asp:LinkButton>&nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="LnkTeacher" runat="server" OnClick="LnkTeacher_Click" Font-Names="Corbel" Font-Underline="False" ForeColor="Black" CssClass="auto-style2">Teacher</asp:LinkButton>&nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="LnkStudent" runat="server" OnClick="LnkStudent_Click" Font-Names="Corbel" Font-Underline="False" ForeColor="Black" CssClass="auto-style2">Student</asp:LinkButton>&nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="LnkLogout" runat="server" OnClick="LnkLogout_Click" Font-Names="Corbel" Font-Underline="False" ForeColor="Black" CssClass="auto-style2">Logout</asp:LinkButton>&nbsp;&nbsp;&nbsp;
+            </div>
+                <br />
+                <div>
+                    <asp:Label ID="LabUserLogin" runat="server" Font-Names="Microsoft Sans Serif" CssClass="auto-style3" ForeColor="Black"></asp:Label>
+                </div>
+                <br /><br />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                
+            </asp:ContentPlaceHolder>
+                </center>
+        </div>
+    </form>
+</body>
+</html>

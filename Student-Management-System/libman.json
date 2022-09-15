@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "defaultProvider": "filesystem",
+  "libraries": [
+    {
+      "library": "E:\\",
+      "destination": "Images/E/",
+      "files": [
+        "Student-Management-System-project.jpg"
+      ]
+    },
+    {
+      "library": "E:/",
+      "destination": "Images/E/",
+      "files": [
+        "Logo.jpg"
+      ]
+    },
+    {
+      "library": "E:/Images/",
+      "destination": "Images/E/Images/",
+      "files": [
+        "Master.png"
+      ]
+    }
+  ]
+}
