@@ -41,6 +41,7 @@
             <br />
             <br />
             <br />
+            <asp:Label ID="Label2" runat="server" Font-Bold="True" Font-Italic="True" Font-Names="Calibri" Font-Size="X-Large" ForeColor="Red" Text="Your Details"></asp:Label>
             <br />
             <asp:ListView ID="ListView1" runat="server" DataSourceID="SqlDataSource1">
                 <AlternatingItemTemplate>
@@ -151,6 +152,109 @@
             </asp:SqlDataSource>
             <br />
             <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <asp:Label ID="Label1" runat="server" Font-Italic="True" Font-Names="Calibri" Font-Size="X-Large" ForeColor="Blue" Text="The Students registered for the respective Course "></asp:Label>
+            <br />
+            <br />
+            <asp:ListView ID="ListView2" runat="server" DataSourceID="SqlDataSource2">
+                <AlternatingItemTemplate>
+                    <span style="">Stfname:
+                    <asp:Label ID="StfnameLabel" runat="server" Text='<%# Eval("Stfname") %>' />
+                    <br />
+                    Stlname:
+                    <asp:Label ID="StlnameLabel" runat="server" Text='<%# Eval("Stlname") %>' />
+                    <br />
+                    StEmail:
+                    <asp:Label ID="StEmailLabel" runat="server" Text='<%# Eval("StEmail") %>' />
+                    <br />
+                    Stphone:
+                    <asp:Label ID="StphoneLabel" runat="server" Text='<%# Eval("Stphone") %>' />
+<br />
+                    <br />
+                    </span>
+                </AlternatingItemTemplate>
+                <EditItemTemplate>
+                    <span style="">Stfname:
+                    <asp:TextBox ID="StfnameTextBox" runat="server" Text='<%# Bind("Stfname") %>' />
+                    <br />
+                    Stlname:
+                    <asp:TextBox ID="StlnameTextBox" runat="server" Text='<%# Bind("Stlname") %>' />
+                    <br />
+                    StEmail:
+                    <asp:TextBox ID="StEmailTextBox" runat="server" Text='<%# Bind("StEmail") %>' />
+                    <br />
+                    Stphone:
+                    <asp:TextBox ID="StphoneTextBox" runat="server" Text='<%# Bind("Stphone") %>' />
+                    <br />
+                    <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
+                    <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
+                    <br /><br /></span>
+                </EditItemTemplate>
+                <EmptyDataTemplate>
+                    <span>No data was returned.</span>
+                </EmptyDataTemplate>
+                <InsertItemTemplate>
+                    <span style="">Stfname:
+                    <asp:TextBox ID="StfnameTextBox" runat="server" Text='<%# Bind("Stfname") %>' />
+                    <br />Stlname:
+                    <asp:TextBox ID="StlnameTextBox" runat="server" Text='<%# Bind("Stlname") %>' />
+                    <br />StEmail:
+                    <asp:TextBox ID="StEmailTextBox" runat="server" Text='<%# Bind("StEmail") %>' />
+                    <br />Stphone:
+                    <asp:TextBox ID="StphoneTextBox" runat="server" Text='<%# Bind("Stphone") %>' />
+                    <br />
+                    <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
+                    <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
+                    <br /><br /></span>
+                </InsertItemTemplate>
+                <ItemTemplate>
+                    <span style="">Stfname:
+                    <asp:Label ID="StfnameLabel" runat="server" Text='<%# Eval("Stfname") %>' />
+                    <br />
+                    Stlname:
+                    <asp:Label ID="StlnameLabel" runat="server" Text='<%# Eval("Stlname") %>' />
+                    <br />
+                    StEmail:
+                    <asp:Label ID="StEmailLabel" runat="server" Text='<%# Eval("StEmail") %>' />
+                    <br />
+                    Stphone:
+                    <asp:Label ID="StphoneLabel" runat="server" Text='<%# Eval("Stphone") %>' />
+<br />
+                    <br />
+                    </span>
+                </ItemTemplate>
+                <LayoutTemplate>
+                    <div id="itemPlaceholderContainer" runat="server" style="">
+                        <span runat="server" id="itemPlaceholder" />
+                    </div>
+                    <div style="">
+                    </div>
+                </LayoutTemplate>
+                <SelectedItemTemplate>
+                    <span style="">Stfname:
+                    <asp:Label ID="StfnameLabel" runat="server" Text='<%# Eval("Stfname") %>' />
+                    <br />
+                    Stlname:
+                    <asp:Label ID="StlnameLabel" runat="server" Text='<%# Eval("Stlname") %>' />
+                    <br />
+                    StEmail:
+                    <asp:Label ID="StEmailLabel" runat="server" Text='<%# Eval("StEmail") %>' />
+                    <br />
+                    Stphone:
+                    <asp:Label ID="StphoneLabel" runat="server" Text='<%# Eval("Stphone") %>' />
+<br />
+                    <br />
+                    </span>
+                </SelectedItemTemplate>
+            </asp:ListView>
+            <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:StudentManagementSystemConnectionString11 %>" SelectCommand="SELECT [Stfname], [Stlname], [StEmail], [Stphone] FROM [student] WHERE ([Coursejoin] = @Coursejoin)">
+                <SelectParameters>
+                    <asp:SessionParameter Name="Coursejoin" SessionField="course" Type="String" />
+                </SelectParameters>
+            </asp:SqlDataSource>
             <br />
             </center>
         </div>

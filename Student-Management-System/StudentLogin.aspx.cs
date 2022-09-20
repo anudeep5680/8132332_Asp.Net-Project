@@ -29,6 +29,7 @@ namespace Student_Management_System
                 Labmsg.Text = "Login Success";
                 Session["Studentname"] = "Welcome " + TxtStdId.Text;
                 Session["Student"] = dt.Rows[0][1].ToString();
+                Session["course"] = dt.Rows[0][4].ToString();
                 Response.Redirect("StudentHome.aspx");
             }
             else
