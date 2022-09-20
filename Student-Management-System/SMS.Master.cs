@@ -17,13 +17,16 @@ namespace Student_Management_System
             }
             else
             {
-                Response.Redirect("HomePage.aspx");
+                Response.Redirect("AdminPage.aspx");
             }
         }
 
         protected void LnkCourse_Click(object sender, EventArgs e)
         {
-            Response.Redirect("CoursePage.aspx");
+            if (Session["Adminname"]!=null)
+            {
+                Response.Redirect("CoursePage.aspx");
+            }
         }
 
         protected void LnkTeacher_Click(object sender, EventArgs e)
@@ -39,7 +42,7 @@ namespace Student_Management_System
         protected void LnkLogout_Click(object sender, EventArgs e)
         {
             HttpContext.Current.Session.Abandon();
-            Response.Redirect("HomePage.aspx");
+            Response.Redirect("Home.aspx");
         }
 
         protected void LnkAdmin_Click(object sender, EventArgs e)
