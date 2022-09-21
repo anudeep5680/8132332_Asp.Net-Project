@@ -33,6 +33,15 @@ namespace Student_Management_System
         protected global::System.Web.UI.WebControls.TextBox TxtStdId;
 
         /// <summary>
+        /// reqfldValidatorUserId control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqfldValidatorUserId;
+
+        /// <summary>
         /// TxtPwdStd control.
         /// </summary>
         /// <remarks>
@@ -40,6 +49,15 @@ namespace Student_Management_System
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TxtPwdStd;
+
+        /// <summary>
+        /// reqfldValidatorPwd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator reqfldValidatorPwd;
 
         /// <summary>
         /// ButLogin control.

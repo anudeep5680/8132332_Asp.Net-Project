@@ -64,18 +64,21 @@ width: 462px;
                             <td class="newStyle2"><strong>Student User Id<br />
                                 </strong>(User Id is your First name)</td>
                             <td class="newStyle2">
-                                <asp:TextBox ID="TxtStdId" runat="server" Width="204px"></asp:TextBox></td>
+                                <asp:TextBox ID="TxtStdId" runat="server" Width="204px"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="reqfldValidatorUserId" runat="server" ErrorMessage="Please, Enter User ID" ForeColor="Red" ValidationGroup="Student"></asp:RequiredFieldValidator>
+                            </td>
                         </tr>
                         <tr class="newStyle2">
                             <td><strong>Password<br />
                                 </strong>(Password is your Phone number)</td>
                             <td class="auto-style4">
                                 <asp:TextBox ID="TxtPwdStd" runat="server" TextMode="Password" Width="204px"></asp:TextBox>
+                                <asp:RequiredFieldValidator ID="reqfldValidatorPwd" runat="server" ErrorMessage="Please, Enter Password" ForeColor="Red" ValidationGroup="Student"></asp:RequiredFieldValidator>
                             </td>
                         </tr>
                         <tr class="newStyle2">
                             <td class="auto-style1">
-                                <asp:Button ID="ButLogin" runat="server" Text="Login" OnClick="ButLogin_Click" Width="89px"/>
+                                <asp:Button ID="ButLogin" runat="server" Text="Login" OnClick="ButLogin_Click" Width="89px" ValidationGroup="Student"/>
                             </td>
                             <td class="auto-style5">
                                 &nbsp;
